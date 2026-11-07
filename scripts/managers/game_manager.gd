@@ -18,6 +18,7 @@ this sits on the game, takes input from the procedural_generation code,
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$AirPylon.setAir(false)
 	$Thermometer.setTemp(-50)
 
 

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d1lv7x0c5ogpj" path="res://scenes/level/level.tscn" id="4_3yu1d"]
 [ext_resource type="PackedScene" uid="uid://djp0nv4ddbxsf" path="res://scenes/experiments/thermometer.tscn" id="5_3yu1d"]
 [ext_resource type="PackedScene" uid="uid://cb45aiv40rjpf" path="res://alienEntity/hostile_alien.tscn" id="6_c2g8d"]
+[ext_resource type="PackedScene" uid="uid://cebd01rc0yf0w" path="res://scenes/experiments/airPylon.tscn" id="6_fagfu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bixf"]
 size = Vector2(222, 138)
@@ -23,10 +24,6 @@ zoom = Vector2(0.75, 0.75)
 
 [node name="Level" parent="." unique_id=1287492299 instance=ExtResource("4_3yu1d")]
 
-[node name="Thermometer" parent="." unique_id=1697934362 instance=ExtResource("5_3yu1d")]
-position = Vector2(224.00003, 80)
-scale = Vector2(1.3, 1.3)
-
 [node name="baseAlien" parent="." unique_id=1926721184 instance=ExtResource("6_c2g8d")]
 position = Vector2(1029, 69)
 
@@ -35,6 +32,11 @@ position = Vector2(1029, 69)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="showInfo" unique_id=1492723572]
 position = Vector2(-265, 131)
 shape = SubResource("RectangleShape2D_3bixf")
+
+[node name="AirPylon" parent="." unique_id=1424453277 instance=ExtResource("6_fagfu")]
+position = Vector2(274, 77)
+
+[node name="Thermometer" parent="." unique_id=162342294 instance=ExtResource("5_3yu1d")]
 
 [connection signal="hideInfo" from="Player" to="Player/Camera" method="_on_player_hide_info"]
 [connection signal="showInfo" from="Player" to="Player/Camera" method="_on_player_show_info"]
