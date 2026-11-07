@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cebd01rc0yf0w"]
+
+[ext_resource type="Texture2D" uid="uid://dpunqpfijmmdo" path="res://icon.svg" id="1_iryul"]
+[ext_resource type="Script" uid="uid://1y5u75awe04w" path="res://scripts/experiments/air_pylon.gd" id="1_xkgi6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkgi6"]
+size = Vector2(44, 107)
+
+[node name="AirPylon" type="Node2D" unique_id=862472904]
+script = ExtResource("1_xkgi6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1424453277]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1610677519]
+shape = SubResource("RectangleShape2D_xkgi6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=370802964]
+position = Vector2(1.4305115e-06, 1.9073486e-06)
+scale = Vector2(0.34375, 0.82812506)
+texture = ExtResource("1_iryul")
+
+[node name="readingTime" type="Timer" parent="." unique_id=479250660]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="readingTime" to="." method="_on_reading_time_timeout"]
