@@ -12,6 +12,8 @@ var currentState = State.IDLE
 func _process(delta: float) -> void:
 	if currentState == State.IDLE:
 		velocity.x = lerp(velocity.x, VELOCITY*delta*dir, 1)
+	if not is_on_floor():
+		velocity += get_gravity()*delta
 	move_and_slide()
 
 
