@@ -19,8 +19,8 @@ shape = SubResource("RectangleShape2D_3bixf")
 texture = ExtResource("1_8afob")
 
 [node name="interactionSphere" type="Area2D" parent="." unique_id=1982946782]
-collision_layer = 4
-collision_mask = 4
+collision_layer = 12
+collision_mask = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactionSphere" unique_id=419234317]
 shape = SubResource("CircleShape2D_3bixf")

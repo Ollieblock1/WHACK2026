@@ -18,7 +18,7 @@ this sits on the game, takes input from the procedural_generation code,
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Thermometer.setTemp(5)
+	$Thermometer.setTemp(-50)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
