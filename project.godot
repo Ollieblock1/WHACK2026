@@ -41,6 +41,12 @@ moveJump={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="physical"
+2d_physics/layer_2="experimentCheck"
+2d_physics/layer_3="interactCheck"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
