@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://cebd01rc0yf0w"]
 
-[ext_resource type="Texture2D" uid="uid://dpunqpfijmmdo" path="res://icon.svg" id="1_iryul"]
 [ext_resource type="Script" uid="uid://1y5u75awe04w" path="res://scripts/experiments/air_pylon.gd" id="1_xkgi6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkgi6"]
@@ -8,19 +7,36 @@ size = Vector2(44, 107)
 
 [node name="AirPylon" type="Area2D" unique_id=1424453277]
 position = Vector2(0, -54)
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("1_xkgi6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1610677519]
 shape = SubResource("RectangleShape2D_xkgi6")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=370802964]
-position = Vector2(1.4305115e-06, 1.9073486e-06)
-scale = Vector2(0.34375, 0.82812506)
-texture = ExtResource("1_iryul")
 
 [node name="readingTime" type="Timer" parent="." unique_id=479250660]
 wait_time = 10.0
 one_shot = true
 autostart = true
 
+[node name="Label" type="Label" parent="." unique_id=624829231]
+visible = false
+offset_left = -39.0
+offset_top = -77.0
+offset_right = 39.0
+offset_bottom = -54.0
+text = "Working..."
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2130255200]
+offset_left = -21.868988
+offset_top = 53.00001
+offset_right = -2.8135395
+offset_bottom = 75.459755
+rotation = -1.5707964
+scale = Vector2(5.57859, 1.979658)
+show_percentage = false
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="timeout" from="readingTime" to="." method="_on_reading_time_timeout"]
