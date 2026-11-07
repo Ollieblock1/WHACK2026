@@ -24,3 +24,4 @@ position = Vector2(224.00003, 80)
 scale = Vector2(1.3, 1.3)
 
 [connection signal="oxygenLost" from="Player/Camera" to="." method="_on_camera_oxygen_lost"]
+[connection signal="levelOver" from="Level" to="." method="_on_level_level_over"]

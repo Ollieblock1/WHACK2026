@@ -1,25 +1,14 @@
 [gd_scene format=3 uid="uid://d1lv7x0c5ogpj"]
 
+[ext_resource type="Script" uid="uid://c0ck5mbexxmq4" path="res://scripts/level/level.gd" id="1_i166f"]
 [ext_resource type="Texture2D" uid="uid://dpunqpfijmmdo" path="res://icon.svg" id="2_i166f"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_poog2"]
-size = Vector2(286, 200)
+[ext_resource type="PackedScene" uid="uid://de2a504k2rywt" path="res://scenes/ship/ship.tscn" id="2_nbgty"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hq1vv"]
 size = Vector2(2986, 192)
 
 [node name="Level" type="Node2D" unique_id=1287492299]
-
-[node name="Ship" type="Area2D" parent="." unique_id=213835000]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship" unique_id=705960180]
-position = Vector2(-432, 34)
-shape = SubResource("RectangleShape2D_poog2")
-
-[node name="Sprite2D" type="Sprite2D" parent="Ship" unique_id=76057104]
-position = Vector2(-434, 33.5)
-scale = Vector2(2.34375, 1.5546875)
-texture = ExtResource("2_i166f")
+script = ExtResource("1_i166f")
 
 [node name="floor" type="StaticBody2D" parent="." unique_id=768738622]
 
@@ -31,3 +20,8 @@ shape = SubResource("RectangleShape2D_hq1vv")
 position = Vector2(909.49994, 227)
 scale = Vector2(23.38281, 1.5)
 texture = ExtResource("2_i166f")
+
+[node name="Ship2" parent="." unique_id=1740454847 instance=ExtResource("2_nbgty")]
+position = Vector2(-386, 9)
+
+[connection signal="levelOver" from="Ship2" to="." method="_on_ship_2_level_over"]
