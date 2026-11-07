@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://fb2s3dbq7473"]
+[gd_scene format=3 uid="uid://1k3x53arfo7d"]
 
-[ext_resource type="Script" uid="uid://u465bmx6l5cj" path="res://scripts/experiments/flying_metal.gd" id="1_ibw3q"]
+[ext_resource type="Script" path="res://scripts/experiments/flying_metal.gd" id="1_ibw3q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bixf"]
 size = Vector2(220, 20)
