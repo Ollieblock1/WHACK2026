@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://djp0nv4ddbxsf"]
+
+[ext_resource type="Script" uid="uid://6cb0serxqvjf" path="res://scripts/experiments/thermometer.gd" id="1_lbx8j"]
+[ext_resource type="Texture2D" uid="uid://dpunqpfijmmdo" path="res://icon.svg" id="2_366s2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bixf"]
+size = Vector2(14, 28)
+
+[node name="Thermometer" type="Node2D" unique_id=1697934362]
+script = ExtResource("1_lbx8j")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=162342294]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=597419900]
+shape = SubResource("RectangleShape2D_3bixf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=833540311]
+position = Vector2(1.7881393e-07, 1.4901161e-07)
+scale = Vector2(0.10937499, 0.21875)
+texture = ExtResource("2_366s2")
