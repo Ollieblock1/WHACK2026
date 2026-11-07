@@ -17,7 +17,6 @@ func setTemp(inTemp) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	viewedTemp += ((temp-viewedTemp)/5) * delta
-	print(viewedTemp)
 	var displayedText = ""
 	if len(str(int(abs(viewedTemp)))) < 2:
 		displayedText += "0"

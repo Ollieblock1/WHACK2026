@@ -28,3 +28,5 @@ func _process(delta: float) -> void:
 
 func _on_camera_oxygen_lost() -> void:
 	print("DIE")
+
+	

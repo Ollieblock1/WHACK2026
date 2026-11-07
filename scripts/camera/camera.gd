@@ -49,3 +49,11 @@ func _process(delta: float) -> void:
 			oxygenLost.emit()
 			emitted = true
 	
+
+
+func _on_player_show_info() -> void:
+	$InfoScreen.show()
+
+
+func _on_player_hide_info() -> void:
+	$InfoScreen.hide()

@@ -1,9 +1,18 @@
 [gd_scene format=3 uid="uid://fq3wafqtn3dq"]
 
 [ext_resource type="Script" uid="uid://cje8srlxoi23w" path="res://scripts/camera/camera.gd" id="1_xejhd"]
+[ext_resource type="PackedScene" uid="uid://bck5pcfa82u6e" path="res://scenes/infoScreen.tscn" id="2_6m2n3"]
 
 [node name="Camera" type="Camera2D" unique_id=1382850481]
 script = ExtResource("1_xejhd")
+
+[node name="InfoScreen" parent="." unique_id=851300588 instance=ExtResource("2_6m2n3")]
+visible = false
+z_index = 1
+offset_left = -177.0
+offset_top = -236.0
+offset_right = -177.0
+offset_bottom = -236.0
 
 [node name="Label" type="Label" parent="." unique_id=1727742880]
 offset_left = -566.0
