@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://djsx2ols57186"]
 
 [ext_resource type="Script" uid="uid://dfjq73rci6jms" path="res://scripts/managers/game_manager.gd" id="1_i04cf"]
+[ext_resource type="PackedScene" uid="uid://fq3wafqtn3dq" path="res://scenes/camera/camera.tscn" id="2_r76ct"]
 
 [node name="gameManager" type="Node2D" unique_id=493323348]
 script = ExtResource("1_i04cf")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1605100119]
+[node name="Camera" parent="." unique_id=1382850481 instance=ExtResource("2_r76ct")]
 
-[node name="Node" type="Node" parent="Camera2D" unique_id=1497067922]
+[connection signal="oxygenLost" from="Camera" to="." method="_on_camera_oxygen_lost"]
