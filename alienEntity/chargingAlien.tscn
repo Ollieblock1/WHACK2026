@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ddr6fd7xjl8bb"]
+
+[ext_resource type="PackedScene" uid="uid://c24vb3q8ric6o" path="res://alienEntity/base_alien.tscn" id="1_lra65"]
+[ext_resource type="Script" uid="uid://dwlx72jgpavkg" path="res://alienEntity/charging_alien.gd" id="2_v7u24"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_poog2"]
+radius = 83.02409
+
+[node name="baseAlien" unique_id=1926721184 instance=ExtResource("1_lra65")]
+script = ExtResource("2_v7u24")
+SPEEDINCREASE = 2.5
+
+[node name="Detector" type="Area2D" parent="." index="3" unique_id=1709696457]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" index="0" unique_id=1449492476]
+shape = SubResource("CircleShape2D_poog2")
+
+[connection signal="area_entered" from="Detector" to="." method="_on_detector_area_entered"]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cb45aiv40rjpf"]
+
+[ext_resource type="PackedScene" uid="uid://ddr6fd7xjl8bb" path="res://alienEntity/chargingAlien.tscn" id="1_hsch1"]
+[ext_resource type="Script" uid="uid://cd68rw70r7bu4" path="res://alienEntity/hostile_alien.gd" id="2_vxn6r"]
+
+[node name="baseAlien" unique_id=1926721184 instance=ExtResource("1_hsch1")]
+script = ExtResource("2_vxn6r")
+
+[node name="eyebrows" type="Node2D" parent="." index="4" unique_id=1967970796]
+visible = false
+position = Vector2(16.000004, -36)
+rotation = -0.7155937
+scale = Vector2(0.625, 0.625)
+
+[node name="ColorRect2" type="ColorRect" parent="eyebrows" index="0" unique_id=1282343703]
+offset_left = -18.606087
+offset_top = -22.799423
+offset_right = 21.393913
+offset_bottom = 102.11397
+rotation = -3.2375858
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="eyebrows" index="1" unique_id=2037537462]
+offset_left = 126.70775
+offset_top = -2.4796677
+offset_right = 166.70775
+offset_bottom = 122.43372
+rotation = 1.5707964
+color = Color(0, 0, 0, 1)
