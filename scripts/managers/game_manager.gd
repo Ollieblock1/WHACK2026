@@ -1,8 +1,9 @@
 extends Node2D
 
 
-var colonyExpectations
-var planetValues
+var procgenEngine
+var procgenResults
+var infoScreen = preload("res://scenes/infoScreen.tscn")
 
 
 '''
@@ -20,6 +21,14 @@ this sits on the game, takes input from the procedural_generation code,
 func _ready() -> void:
 	$AirPylon.setAir(false)
 	$Thermometer.setTemp(-50)
+	procgenEngine = preload("res://scripts/procedural_generation.gd").new()
+	
+	var procgenResults = procgenEngine.generate_planet()
+	print(procgenResults)
+	$Level.buildLevel(procgenResults[0])
+	$Level.setColonyPreferences(procgenResults[1])
+	
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,5 +38,8 @@ func _process(delta: float) -> void:
 
 func _on_camera_oxygen_lost() -> void:
 	print("DIE")
+
+
+
 
 	

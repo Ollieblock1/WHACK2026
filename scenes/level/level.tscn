@@ -7,6 +7,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hq1vv"]
 size = Vector2(2986, 192)
 
+[sub_resource type="Curve2D" id="Curve2D_i166f"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2350, 21, 0, 0, 0, 0, 30, 14)
+}
+point_count = 2
+
 [node name="Level" type="Node2D" unique_id=1287492299]
 script = ExtResource("1_i166f")
 
@@ -24,4 +30,21 @@ texture = ExtResource("2_i166f")
 [node name="Ship2" parent="." unique_id=1740454847 instance=ExtResource("2_nbgty")]
 position = Vector2(-386, 9)
 
+[node name="Path2D" type="Path2D" parent="." unique_id=122375168]
+position = Vector2(0, 36)
+curve = SubResource("Curve2D_i166f")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1934735149]
+position = Vector2(2350, 21)
+rotation = -3.1385753
+
+[node name="screen" type="Marker2D" parent="." unique_id=1130310366]
+position = Vector2(-568, -317)
+
+[node name="UI" type="Node2D" parent="." unique_id=2120604933]
+
+[node name="aliens" type="Node2D" parent="." unique_id=433730232]
+
+[connection signal="body_entered" from="Ship2" to="." method="_on_ship_2_body_entered"]
+[connection signal="body_exited" from="Ship2" to="." method="_on_ship_2_body_exited"]
 [connection signal="levelOver" from="Ship2" to="." method="_on_ship_2_level_over"]
