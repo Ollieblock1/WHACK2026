@@ -1,20 +1,35 @@
 [gd_scene format=3 uid="uid://djp0nv4ddbxsf"]
 
 [ext_resource type="Script" uid="uid://6cb0serxqvjf" path="res://scripts/experiments/thermometer.gd" id="1_lbx8j"]
-[ext_resource type="Texture2D" uid="uid://dpunqpfijmmdo" path="res://icon.svg" id="2_366s2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bixf"]
-size = Vector2(14, 28)
+size = Vector2(38, 78)
 
-[node name="Thermometer" type="Node2D" unique_id=1697934362]
+[node name="Thermometer" type="Area2D" unique_id=162342294]
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("1_lbx8j")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=162342294]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=597419900]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=597419900]
 shape = SubResource("RectangleShape2D_3bixf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=833540311]
-position = Vector2(1.7881393e-07, 1.4901161e-07)
-scale = Vector2(0.10937499, 0.21875)
-texture = ExtResource("2_366s2")
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1482481297]
+offset_left = -8.0
+offset_top = 37.0
+offset_right = 45.795124
+offset_bottom = 54.669846
+rotation = -1.5707964
+min_value = -100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="." unique_id=1649490068]
+visible = false
+offset_left = -17.0
+offset_top = -39.0
+offset_right = 21.0
+offset_bottom = -16.0
+theme_override_font_sizes/font_size = 13
+text = "X00.0"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -6,7 +6,7 @@ var emitted = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	timeCount = 20
+	timeCount = 120
 
 
 
