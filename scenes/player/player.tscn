@@ -9,7 +9,7 @@ size = Vector2(128, 128)
 [sub_resource type="CircleShape2D" id="CircleShape2D_3bixf"]
 radius = 396.61063
 
-[node name="Player" type="CharacterBody2D" unique_id=2066525280]
+[node name="Player" type="CharacterBody2D" unique_id=2066525280 groups=["player"]]
 script = ExtResource("1_dovo2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1881094132]

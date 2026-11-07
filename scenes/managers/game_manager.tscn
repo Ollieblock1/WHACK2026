@@ -39,5 +39,6 @@ shape = SubResource("RectangleShape2D_3bixf")
 [connection signal="hideInfo" from="Player" to="Player/Camera" method="_on_player_hide_info"]
 [connection signal="showInfo" from="Player" to="Player/Camera" method="_on_player_show_info"]
 [connection signal="oxygenLost" from="Player/Camera" to="." method="_on_camera_oxygen_lost"]
+[connection signal="levelOver" from="Level" to="." method="_on_level_level_over"]
 [connection signal="body_entered" from="showInfo" to="Player" method="_on_show_info_body_entered"]
 [connection signal="body_exited" from="showInfo" to="Player" method="_on_show_info_body_exited"]
