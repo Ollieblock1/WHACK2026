@@ -25,6 +25,6 @@ position = Vector2(224.00003, 80)
 scale = Vector2(1.3, 1.3)
 
 [node name="baseAlien" parent="." unique_id=1926721184 instance=ExtResource("6_c2g8d")]
-position = Vector2(724, 67)
+position = Vector2(1029, 69)
 
 [connection signal="oxygenLost" from="Player/Camera" to="." method="_on_camera_oxygen_lost"]
