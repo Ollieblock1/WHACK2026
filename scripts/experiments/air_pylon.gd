@@ -13,10 +13,17 @@ func setAir(inAir) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if viewable:
-		print(air)
+	$ProgressBar.value = 100-($readingTime.time_left*10)
 
 
 func _on_reading_time_timeout() -> void:
-	viewable = true
+	$Label.text = "Air quality: good" if air else "Air quality: bad"
 	
+
+
+func _on_area_entered(area: Area2D) -> void:
+	$Label.show()
+
+
+func _on_area_exited(area: Area2D) -> void:
+	$Label.hide()
