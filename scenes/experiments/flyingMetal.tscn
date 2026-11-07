@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://1k3x53arfo7d"]
+
+[ext_resource type="Script" path="res://scripts/experiments/flying_metal.gd" id="1_ibw3q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bixf"]
+size = Vector2(220, 20)
+
+[node name="FlyingMetal" type="CharacterBody2D" unique_id=705397437]
+script = ExtResource("1_ibw3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1390573522]
+shape = SubResource("RectangleShape2D_3bixf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1299901826]
+offset_left = -110.0
+offset_top = -10.0
+offset_right = 110.0
+offset_bottom = 10.0
+color = Color(0.31, 0.31, 0.31, 1)
