@@ -27,5 +27,6 @@ limit_right = 2410
 [node name="baseAlien" parent="." unique_id=1926721184 instance=ExtResource("6_fagfu")]
 
 [connection signal="displayMenu" from="Level" to="." method="_on_level_display_menu"]
+[connection signal="levelOver" from="Level" to="." method="_on_level_level_over"]
 [connection signal="damage" from="Player" to="UI" method="_on_player_damage"]
 [connection signal="placeExperiment" from="Player" to="." method="_on_player_place_experiment"]

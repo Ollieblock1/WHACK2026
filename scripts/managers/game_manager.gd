@@ -11,6 +11,7 @@ var experiments = [
 	preload("res://scenes/experiments/flyingMetal.tscn")
 ]
 
+signal levelOver(results)
 '''
 What is the purpose of this?
 this sits on the game, takes input from the procedural_generation code, 
@@ -66,3 +67,7 @@ func _on_player_place_experiment(object: Variant, point: Variant) -> void:
 	$Level.addObject(instance)
 	instance.global_position = point
 	$UI.updateInventory(object)
+
+
+func _on_level_level_over() -> void:
+	levelOver.emit(procgenResults[2])

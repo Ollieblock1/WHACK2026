@@ -19,7 +19,7 @@ script = ExtResource("1_yvpbp")
 layout_mode = 0
 offset_right = 284.0
 offset_bottom = 348.0
-color = Color(0.2831805, 0.48616427, 0.50519377, 1)
+color = Color(0.28235295, 0.4862745, 0.5058824, 1)
 
 [node name="Title" type="Label" parent="." unique_id=238991167]
 layout_mode = 0
@@ -59,12 +59,12 @@ script = ExtResource("1_yvpbp")
 
 [node name="NextPage" type="Button" parent="." unique_id=612923535]
 layout_mode = 0
-offset_left = 236.0
-offset_top = 302.0
-offset_right = 284.0
-offset_bottom = 348.0
+offset_left = 94.0
+offset_top = 301.0
+offset_right = 278.0
+offset_bottom = 347.0
 theme_override_font_sizes/font_size = 25
-text = "->"
+text = "Leave Planet->"
 flat = true
 
 [connection signal="pressed" from="NextPage" to="." method="_on_next_page_pressed"]
