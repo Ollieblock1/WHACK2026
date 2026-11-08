@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cw3hso8i0660y"]
+
+[ext_resource type="PackedScene" uid="uid://cgmx7y0ylhhkm" path="res://scenes/UI/final_page.tscn" id="1_oklc4"]
+
+[node name="LossPage" unique_id=584875965 instance=ExtResource("1_oklc4")]
+
+[node name="Label" parent="." index="1" unique_id=1714428890]
+text = "Unfortunately,"

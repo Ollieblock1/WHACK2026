@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://du7alnls04c04"]
+
+[ext_resource type="Script" uid="uid://by64bwmvpb4ye" path="res://scripts/UI/choice_page.gd" id="1_3lve2"]
+
+[node name="ChoicePage" type="Control" unique_id=1238139961]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3lve2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1686404639]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 64.0
+offset_right = 1024.0
+offset_bottom = 568.0
+color = Color(0.28235295, 0.4862745, 0.5058824, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1237475989]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 104.0
+offset_right = 892.0
+offset_bottom = 173.0
+theme_override_font_sizes/font_size = 50
+text = "Is this planet habitable?"
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=1395649305]
+layout_mode = 0
+offset_left = 312.00003
+offset_top = 184.0
+offset_right = 445.00003
+offset_bottom = 261.0
+scale = Vector2(2.31, 2.31)
+theme_override_font_sizes/font_size = 50
+
+[node name="Label2" type="Label" parent="." unique_id=1856160146]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 280.0
+offset_right = 680.0
+offset_bottom = 303.0
+
+[node name="Button" type="Button" parent="." unique_id=923011702]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 376.0
+offset_right = 660.0
+offset_bottom = 453.0
+theme_override_font_sizes/font_size = 50
+text = "Submit"
+
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

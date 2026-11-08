@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cgmx7y0ylhhkm"]
+
+[ext_resource type="Script" uid="uid://jy5j6kwyqfuh" path="res://scripts/managers/final_page.gd" id="1_xcl7t"]
+
+[node name="finalPage" type="Control" unique_id=584875965]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xcl7t")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1314815745]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 64.0
+offset_right = 1024.0
+offset_bottom = 568.0
+color = Color(0.28235295, 0.4862745, 0.5058824, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1714428890]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 104.0
+offset_right = 892.0
+offset_bottom = 173.0
+theme_override_font_sizes/font_size = 50
+text = "Is this planet inhabitable?"
+
+[node name="Label2" type="Label" parent="." unique_id=1743971973]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 188.0
+offset_right = 319.0
+offset_bottom = 211.0
+
+[node name="Button" type="Button" parent="." unique_id=675738073]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 377.0
+offset_right = 720.0
+offset_bottom = 454.0
+theme_override_font_sizes/font_size = 50
+text = "Next Planet"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

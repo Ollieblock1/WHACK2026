@@ -28,4 +28,5 @@ position = Vector2(232, 132)
 [node name="UI" parent="." unique_id=222190250 instance=ExtResource("6_c2g8d")]
 
 [connection signal="displayMenu" from="Level" to="." method="_on_level_display_menu"]
+[connection signal="levelOver" from="Level" to="." method="_on_level_level_over"]
 [connection signal="placeExperiment" from="Player" to="." method="_on_player_place_experiment"]

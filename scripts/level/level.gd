@@ -36,6 +36,9 @@ func buildLevel(levelObject):
 	print(levelObject.aliens)
 
 
+func endLevel():
+	levelOver.emit()
+
 func _on_ship_2_body_exited(body: Node2D) -> void:
 	for i in $UI.get_children():
 		i.queue_free()
@@ -46,5 +49,6 @@ func _on_ship_2_body_entered(body: Node2D) -> void:
 		var instance = infoScreen.instantiate()
 		instance.global_position = $screen.global_position
 		#once implemented
-		#instance.setText(colonyPreferences)
+		instance.set_variable_description(colonyPreferences)
+		instance.levelEnded.connect(endLevel)
 		$UI.add_child(instance)

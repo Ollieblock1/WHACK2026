@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bx7mygwe5xkjp"]
+
+[ext_resource type="Script" uid="uid://d2wc2t35ruph8" path="res://scripts/managers/post_game.gd" id="1_6gjkc"]
+[ext_resource type="PackedScene" uid="uid://du7alnls04c04" path="res://scenes/UI/choice_page.tscn" id="2_fp6mi"]
+
+[node name="PostGame" type="Node2D" unique_id=621649835]
+script = ExtResource("1_6gjkc")
+
+[node name="ChoicePage" parent="." unique_id=1238139961 instance=ExtResource("2_fp6mi")]
+
+[connection signal="choiceMade" from="ChoicePage" to="." method="_on_choice_page_choice_made"]

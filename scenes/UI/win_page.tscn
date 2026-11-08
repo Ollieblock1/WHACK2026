@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dgmw2bx37uwj7"]
+
+[ext_resource type="PackedScene" uid="uid://cgmx7y0ylhhkm" path="res://scenes/UI/final_page.tscn" id="1_rsu8d"]
+
+[node name="winPage" unique_id=584875965 instance=ExtResource("1_rsu8d")]
+
+[node name="Label" parent="." index="1" unique_id=1714428890]
+text = "Congrats!"
+
+[node name="Label2" parent="." index="2" unique_id=1743971973]
+text = "You successfully idenit"

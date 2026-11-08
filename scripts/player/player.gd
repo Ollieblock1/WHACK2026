@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 
-	print($experimentDetector.get_overlapping_areas())
+	
 
 
 	move_and_slide()
