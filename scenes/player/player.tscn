@@ -95,14 +95,6 @@ region = Rect2(192, 0, 64, 48)
 atlas = ExtResource("2_dovo2")
 region = Rect2(256, 0, 64, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ioxgp"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(0, 240, 64, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cnsyf"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(64, 240, 64, 48)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_007i1"]
 atlas = ExtResource("2_dovo2")
 region = Rect2(128, 240, 64, 48)
@@ -114,14 +106,6 @@ region = Rect2(192, 240, 64, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_j4nxn"]
 atlas = ExtResource("2_dovo2")
 region = Rect2(256, 240, 64, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_28m0y"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(320, 240, 64, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uniwh"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(384, 240, 64, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dovo2"]
 atlas = ExtResource("2_dovo2")
@@ -226,12 +210,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ioxgp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cnsyf")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_007i1")
 }, {
 "duration": 1.0,
@@ -239,12 +217,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j4nxn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_28m0y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uniwh")
 }],
 "loop": 0,
 "name": &"jump",
@@ -312,9 +284,8 @@ debug_color = Color(1, 0, 0, 0.41960785)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=630544719]
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_3bixf")
-animation = &"run"
+animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.0067470446
 
 [connection signal="timeout" from="iframes" to="." method="_on_iframes_timeout"]
 [connection signal="body_entered" from="hitbox" to="." method="_on_experiment_detector_body_entered"]
