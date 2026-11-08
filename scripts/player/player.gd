@@ -44,12 +44,13 @@ func placeExperimentObject(index):
 
 
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("select1") and len($experimentDetector.get_overlapping_areas()) == 0:
-		placeExperimentObject(0)
-	elif Input.is_action_just_pressed("select2") and len($experimentDetector.get_overlapping_areas()) == 0:
-		placeExperimentObject(1)
-	elif Input.is_action_just_pressed("select3") and len($experimentDetector.get_overlapping_areas()) == 0:
-		placeExperimentObject(2)
+	if len($experimentDetector.get_overlapping_areas()) == 0 and is_on_floor():
+		if Input.is_action_just_pressed("select1"):
+			placeExperimentObject(0)
+		elif Input.is_action_just_pressed("select2"):
+			placeExperimentObject(1)
+		elif Input.is_action_just_pressed("select3"):
+			placeExperimentObject(2)
 
 '''
 func _on_show_info_body_entered(body: Node2D) -> void:
