@@ -13,6 +13,7 @@ radius = 396.61063
 radius = 79.83107
 
 [node name="Player" type="CharacterBody2D" unique_id=2066525280 groups=["player"]]
+collision_layer = 8
 script = ExtResource("1_dovo2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1881094132]

@@ -27,6 +27,7 @@ animations = [{
 size = Vector2(122, 126)
 
 [node name="baseAlien" type="CharacterBody2D" unique_id=1926721184]
+collision_layer = 0
 script = ExtResource("1_mjqml")
 VELOCITY = 5000
 

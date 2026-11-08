@@ -13,6 +13,10 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3bixf"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1phas"]
+
 [node name="Level" type="Node2D" unique_id=1287492299]
 script = ExtResource("1_i166f")
 
@@ -47,6 +51,18 @@ position = Vector2(-568, -317)
 
 [node name="Experiments" type="Node2D" parent="." unique_id=456956934]
 position = Vector2(0, 36)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1587103293]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=227859744]
+position = Vector2(-583, 136)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_3bixf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1254671888]
+position = Vector2(2407, 167)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_1phas")
 
 [connection signal="body_entered" from="Ship2" to="." method="_on_ship_2_body_entered"]
 [connection signal="body_exited" from="Ship2" to="." method="_on_ship_2_body_exited"]
