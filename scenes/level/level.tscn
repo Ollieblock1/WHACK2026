@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://d1lv7x0c5ogpj"]
 
 [ext_resource type="Script" uid="uid://c0ck5mbexxmq4" path="res://scripts/level/level.gd" id="1_i166f"]
-[ext_resource type="Texture2D" uid="uid://dpunqpfijmmdo" path="res://icon.svg" id="2_i166f"]
 [ext_resource type="PackedScene" uid="uid://de2a504k2rywt" path="res://scenes/ship/ship.tscn" id="2_nbgty"]
+[ext_resource type="Texture2D" uid="uid://c50k1iumgahli" path="res://assets/floor/metal_floor.png" id="3_qkmgm"]
+[ext_resource type="Texture2D" uid="uid://m0334fy570mq" path="res://assets/backgrounds/origbig.png" id="4_qkmgm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hq1vv"]
 size = Vector2(2986, 192)
 
 [sub_resource type="Curve2D" id="Curve2D_i166f"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2350, 21, 0, 0, 0, 0, 30, 14)
+"points": PackedVector2Array(0, 0, 0, 0, 2350, 21, 0, 0, 0, 0, 957, 27)
 }
 point_count = 2
 
@@ -20,6 +21,12 @@ point_count = 2
 [node name="Level" type="Node2D" unique_id=1287492299]
 script = ExtResource("1_i166f")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1927556108]
+z_index = -1
+position = Vector2(963.00006, -628.99994)
+scale = Vector2(1.3593751, 1.5493828)
+texture = ExtResource("4_qkmgm")
+
 [node name="floor" type="StaticBody2D" parent="." unique_id=768738622]
 collision_layer = 17
 
@@ -28,12 +35,12 @@ position = Vector2(912, 229)
 shape = SubResource("RectangleShape2D_hq1vv")
 
 [node name="Sprite2D" type="Sprite2D" parent="floor" unique_id=1056239724]
-position = Vector2(909.49994, 227)
-scale = Vector2(23.38281, 1.5)
-texture = ExtResource("2_i166f")
+position = Vector2(913, 333)
+scale = Vector2(8.5, 8.5)
+texture = ExtResource("3_qkmgm")
 
 [node name="Ship2" parent="." unique_id=1740454847 instance=ExtResource("2_nbgty")]
-position = Vector2(-386, 9)
+position = Vector2(-386, 15)
 
 [node name="Path2D" type="Path2D" parent="." unique_id=122375168]
 position = Vector2(0, 36)
@@ -41,10 +48,10 @@ curve = SubResource("Curve2D_i166f")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1934735149]
 position = Vector2(2350, 21)
-rotation = -3.1385753
+rotation = 3.1372855
 
 [node name="screen" type="Marker2D" parent="." unique_id=1130310366]
-position = Vector2(-568, -317)
+position = Vector2(-526, -317)
 
 [node name="UI" type="Node2D" parent="." unique_id=2120604933]
 

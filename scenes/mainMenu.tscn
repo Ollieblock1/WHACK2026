@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://c7h0tthkblmfb"]
 
 [ext_resource type="Script" uid="uid://bmemlshpbwkrr" path="res://scripts/main_menu.gd" id="1_qkhwq"]
+[ext_resource type="Texture2D" uid="uid://dq4nf5ciwnrg4" path="res://assets/themes/pixelart_starfields/pixelart_starfield.png" id="2_3d1i7"]
+[ext_resource type="Texture2D" uid="uid://d1tvsjl7ihpfh" path="res://assets/UI/neon-ui-kit-lite-r3/x1/panels/dialogue_box.png" id="2_clbkb"]
+[ext_resource type="Texture2D" uid="uid://bwg1ybjkukcjq" path="res://assets/UI/neon-ui-kit-lite-r3/x1/panels/panel_medium.png" id="3_ldpc3"]
+[ext_resource type="Theme" uid="uid://c4r2fa8viknal" path="res://assets/themes/theme.tres" id="3_y35fp"]
+[ext_resource type="FontFile" uid="uid://ceiqkej77agtp" path="res://assets/fonts/not-jam-chunky-sans-6-zip/NotJamChunkySans6/Not Jam Chunky Sans 6.ttf" id="4_y35fp"]
+[ext_resource type="FontFile" uid="uid://dunh8l0iup564" path="res://assets/fonts/Healzone Pixel & Classic Font by thUg-inc/healzone-pixel-by-thUg-inc.ttf" id="5_dj72i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6b2wv"]
+texture = ExtResource("3_ldpc3")
 
 [node name="MainMenu" type="Control" unique_id=2115119578]
 layout_mode = 3
@@ -11,20 +20,37 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qkhwq")
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=658507347]
+position = Vector2(559, 150)
+scale = Vector2(5.3, 5.3)
+texture = ExtResource("2_clbkb")
+
 [node name="Button" type="Button" parent="." unique_id=399414186]
 layout_mode = 0
-offset_left = 312.0
-offset_top = 225.0
-offset_right = 803.0
-offset_bottom = 492.0
+offset_left = 497.0
+offset_top = 335.0
+offset_right = 617.0
+offset_bottom = 426.0
+theme = ExtResource("3_y35fp")
+theme_override_fonts/font = ExtResource("4_y35fp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6b2wv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6b2wv")
 text = "Start"
 
 [node name="Label" type="Label" parent="." unique_id=847468748]
 layout_mode = 0
-offset_left = 499.0
-offset_top = 72.0
-offset_right = 539.0
-offset_bottom = 95.0
-text = "isHabitable()"
+offset_left = 320.0
+offset_top = 93.0
+offset_right = 808.0
+offset_bottom = 191.0
+theme_override_fonts/font = ExtResource("5_dj72i")
+theme_override_font_sizes/font_size = 50
+text = "Habitation"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2127699950]
+z_index = -1
+position = Vector2(579.99994, 328.00003)
+scale = Vector2(3.6249998, 2.05)
+texture = ExtResource("2_3d1i7")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

@@ -1,0 +1,14 @@
+[gd_resource type="Theme" format=3 uid="uid://c4r2fa8viknal"]
+
+[ext_resource type="FontFile" uid="uid://ceiqkej77agtp" path="res://assets/fonts/not-jam-chunky-sans-6-zip/NotJamChunkySans6/Not Jam Chunky Sans 6.ttf" id="1_p0u25"]
+[ext_resource type="Texture2D" uid="uid://bwg1ybjkukcjq" path="res://assets/UI/neon-ui-kit-lite-r3/x1/panels/panel_medium.png" id="2_pdjgs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6b2wv"]
+texture = ExtResource("2_pdjgs")
+
+[resource]
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("1_p0u25")
+Button/styles/hover = SubResource("StyleBoxTexture_6b2wv")
+Button/styles/normal = SubResource("StyleBoxTexture_6b2wv")
+Label/fonts/font = ExtResource("1_p0u25")

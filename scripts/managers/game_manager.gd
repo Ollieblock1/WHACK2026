@@ -5,6 +5,8 @@ var procgenEngine
 var procgenResults
 var infoScreen = preload("res://scenes/infoScreen.tscn")
 
+signal gameOver
+
 var experiments = [
 	preload("res://scenes/experiments/thermometer.tscn"),
 	preload("res://scenes/experiments/airPylon.tscn"),
@@ -31,7 +33,11 @@ func _ready() -> void:
 	print(procgenResults)
 	$Level.buildLevel(procgenResults[0])
 	$Level.setColonyPreferences(procgenResults[1])
-	print(procgenResults[0])
+	print("Temperature: " , procgenResults[0].temp)
+	print("air: " , procgenResults[0].air)
+	print("alien: " , procgenResults[0].aliens)
+	
+	
 	
 	
 
@@ -42,7 +48,8 @@ func _process(delta: float) -> void:
 
 
 func _on_camera_oxygen_lost() -> void:
-	print("DIE")
+	$deathTimer.start()
+	
 
 
 
@@ -71,3 +78,7 @@ func _on_player_place_experiment(object: Variant, point: Variant) -> void:
 
 func _on_level_level_over() -> void:
 	levelOver.emit(procgenResults[2])
+
+
+func _on_death_timer_timeout() -> void:
+	gameOver.emit()

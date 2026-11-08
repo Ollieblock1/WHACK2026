@@ -1,10 +1,121 @@
 [gd_scene format=3 uid="uid://de2a504k2rywt"]
 
-[ext_resource type="Texture2D" uid="uid://dpunqpfijmmdo" path="res://icon.svg" id="1_ccv4y"]
 [ext_resource type="Script" uid="uid://csql3xj237l0j" path="res://scripts/ship/ship.gd" id="1_u5c2e"]
+[ext_resource type="Texture2D" uid="uid://urx5a0h3tnog" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_1.png" id="2_wcdsx"]
+[ext_resource type="Texture2D" uid="uid://wrishddo2i55" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_2.png" id="3_fbtg4"]
+[ext_resource type="Texture2D" uid="uid://dklwn23oglmg1" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_3.png" id="4_bfl6p"]
+[ext_resource type="Texture2D" uid="uid://c5wssv32auc82" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_4.png" id="5_cs6ms"]
+[ext_resource type="Texture2D" uid="uid://h1dojxm5njoo" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_5.png" id="6_7cscm"]
+[ext_resource type="Texture2D" uid="uid://c3dqam5n06ita" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_6.png" id="7_5ik1e"]
+[ext_resource type="Texture2D" uid="uid://d2ber3d5nsnmv" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_7.png" id="8_gfhw0"]
+[ext_resource type="Texture2D" uid="uid://br2dlyk5tdr5x" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_8.png" id="9_wdn68"]
+[ext_resource type="Texture2D" uid="uid://k47v18w7t0rs" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_9.png" id="10_5h68a"]
+[ext_resource type="Texture2D" uid="uid://co742nysjb4fm" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_10.png" id="11_drp0j"]
+[ext_resource type="Texture2D" uid="uid://c6mtjnqrcpn06" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_11.png" id="12_nql2e"]
+[ext_resource type="Texture2D" uid="uid://do4stdec115lq" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_12.png" id="13_52a2e"]
+[ext_resource type="Texture2D" uid="uid://blr00srn7xllf" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_13.png" id="14_6v6i2"]
+[ext_resource type="Texture2D" uid="uid://dsm48bc8xjy8r" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_14.png" id="15_1p3ki"]
+[ext_resource type="Texture2D" uid="uid://bl4u3v6s2syvr" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_15.png" id="16_3sgm2"]
+[ext_resource type="Texture2D" uid="uid://c3v0d465rtxap" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_16.png" id="17_prxn3"]
+[ext_resource type="Texture2D" uid="uid://baok6w66rwa3d" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_17.png" id="18_0431d"]
+[ext_resource type="Texture2D" uid="uid://ch3ifxex406sb" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_18.png" id="19_4wv2o"]
+[ext_resource type="Texture2D" uid="uid://dp2m2bhpj3bhq" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_19.png" id="20_ega6m"]
+[ext_resource type="Texture2D" uid="uid://conyax6ni6l3i" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_20.png" id="21_7av1j"]
+[ext_resource type="Texture2D" uid="uid://brknn1b4wvc5s" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_21.png" id="22_d4w62"]
+[ext_resource type="Texture2D" uid="uid://bto43pufll8cl" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_22.png" id="23_buuwh"]
+[ext_resource type="Texture2D" uid="uid://bgt0u6pmu0cx5" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_23.png" id="24_xv861"]
+[ext_resource type="Texture2D" uid="uid://b140o5ucyfxde" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_24.png" id="25_kwq0m"]
+[ext_resource type="Texture2D" uid="uid://b1va384xo80ej" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_25.png" id="26_ul26r"]
+[ext_resource type="Texture2D" uid="uid://b0i8h60tcltsl" path="res://assets/experiments/Small and Medium Blue Chest - The Bots Series/Medium Blue Chest/Failed to unlock Animation/Failed Anim_26.png" id="27_qikf7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_poog2"]
 size = Vector2(388, 234)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_poog2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wcdsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fbtg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bfl6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cs6ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7cscm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5ik1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gfhw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wdn68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5h68a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_drp0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nql2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_52a2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6v6i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1p3ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3sgm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_prxn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0431d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4wv2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ega6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7av1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_d4w62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_buuwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_xv861")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kwq0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ul26r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qikf7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Ship" type="Area2D" unique_id=1740454847]
 collision_mask = 9
@@ -13,9 +124,10 @@ script = ExtResource("1_u5c2e")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=62632573]
 shape = SubResource("RectangleShape2D_poog2")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=822261456]
-position = Vector2(-6, 1)
-scale = Vector2(3.125, 1.859375)
-texture = ExtResource("1_ccv4y")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=679115687]
+scale = Vector2(9.63, 9.63)
+sprite_frames = SubResource("SpriteFrames_poog2")
+autoplay = "default"
+frame_progress = 0.4535921
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

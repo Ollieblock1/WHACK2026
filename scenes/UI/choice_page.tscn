@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://du7alnls04c04"]
 
 [ext_resource type="Script" uid="uid://by64bwmvpb4ye" path="res://scripts/UI/choice_page.gd" id="1_3lve2"]
+[ext_resource type="Texture2D" uid="uid://dq4nf5ciwnrg4" path="res://assets/themes/pixelart_starfields/pixelart_starfield.png" id="2_2ut4e"]
+[ext_resource type="Texture2D" uid="uid://bwg1ybjkukcjq" path="res://assets/UI/neon-ui-kit-lite-r3/x1/panels/panel_medium.png" id="2_egrry"]
+[ext_resource type="Theme" uid="uid://c4r2fa8viknal" path="res://assets/themes/theme.tres" id="3_4tn5o"]
+[ext_resource type="Texture2D" uid="uid://llu4tkuhg3ty" path="res://assets/New Piskel(1).png" id="4_o6tvk"]
+[ext_resource type="Texture2D" uid="uid://cxo1utmu43qk" path="res://assets/New Piskel.png" id="5_4fr2k"]
 
 [node name="ChoicePage" type="Control" unique_id=1238139961]
 layout_mode = 3
@@ -11,13 +16,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3lve2")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1686404639]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 64.0
-offset_right = 1024.0
-offset_bottom = 568.0
-color = Color(0.28235295, 0.4862745, 0.5058824, 1)
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=114195267]
+position = Vector2(586.32007, 311.15002)
+scale = Vector2(14.024287, 12.882223)
+texture = ExtResource("2_egrry")
 
 [node name="Label" type="Label" parent="." unique_id=1237475989]
 layout_mode = 0
@@ -25,7 +27,8 @@ offset_left = 272.0
 offset_top = 104.0
 offset_right = 892.0
 offset_bottom = 173.0
-theme_override_font_sizes/font_size = 50
+theme = ExtResource("3_4tn5o")
+theme_override_font_sizes/font_size = 30
 text = "Is this planet habitable?"
 
 [node name="CheckButton" type="CheckButton" parent="." unique_id=1395649305]
@@ -36,6 +39,8 @@ offset_right = 445.00003
 offset_bottom = 261.0
 scale = Vector2(2.31, 2.31)
 theme_override_font_sizes/font_size = 50
+theme_override_icons/checked = ExtResource("4_o6tvk")
+theme_override_icons/unchecked = ExtResource("5_4fr2k")
 
 [node name="Label2" type="Label" parent="." unique_id=1856160146]
 layout_mode = 0
@@ -46,12 +51,19 @@ offset_bottom = 303.0
 
 [node name="Button" type="Button" parent="." unique_id=923011702]
 layout_mode = 0
-offset_left = 480.0
-offset_top = 376.0
-offset_right = 660.0
+offset_left = 400.0
+offset_top = 360.0
+offset_right = 736.0
 offset_bottom = 453.0
+theme = ExtResource("3_4tn5o")
 theme_override_font_sizes/font_size = 50
 text = "Submit"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=926211118]
+z_index = -1
+position = Vector2(579.99994, 328.00003)
+scale = Vector2(3.6249998, 2.05)
+texture = ExtResource("2_2ut4e")
 
 [connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

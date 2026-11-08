@@ -23,7 +23,13 @@ limit_right = 2410
 
 [node name="UI" parent="." unique_id=222190250 instance=ExtResource("6_c2g8d")]
 
+[node name="deathTimer" type="Timer" parent="." unique_id=1988592574]
+wait_time = 3.0
+
 [connection signal="displayMenu" from="Level" to="." method="_on_level_display_menu"]
 [connection signal="levelOver" from="Level" to="." method="_on_level_level_over"]
 [connection signal="damage" from="Player" to="UI" method="_on_player_damage"]
 [connection signal="placeExperiment" from="Player" to="." method="_on_player_place_experiment"]
+[connection signal="oxygenLost" from="UI" to="." method="_on_camera_oxygen_lost"]
+[connection signal="oxygenLost" from="UI" to="Player" method="_on_ui_oxygen_lost"]
+[connection signal="timeout" from="deathTimer" to="." method="_on_death_timer_timeout"]

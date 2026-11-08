@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cpc1jmd1oxtw1"]
 
 [ext_resource type="Script" uid="uid://cje8srlxoi23w" path="res://scripts/camera/UI.gd" id="1_suays"]
-[ext_resource type="Texture2D" uid="uid://dpunqpfijmmdo" path="res://icon.svg" id="2_yb1mt"]
+[ext_resource type="Texture2D" uid="uid://cxo1utmu43qk" path="res://assets/New Piskel.png" id="2_41gti"]
+[ext_resource type="FontFile" uid="uid://ceiqkej77agtp" path="res://assets/fonts/not-jam-chunky-sans-6-zip/NotJamChunkySans6/Not Jam Chunky Sans 6.ttf" id="3_f54a5"]
 
 [node name="UI" type="CanvasLayer" unique_id=222190250]
 script = ExtResource("1_suays")
@@ -11,18 +12,61 @@ offset_left = 15.0
 offset_top = 15.0
 offset_right = 202.0
 offset_bottom = 156.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_f54a5")
 theme_override_font_sizes/font_size = 50
 text = "0:00
 "
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1265559868]
-position = Vector2(327, 559)
-texture = ExtResource("2_yb1mt")
+[node name="temp" type="Node2D" parent="." unique_id=2060912590]
+position = Vector2(472, 543.99994)
+scale = Vector2(1.755, 1.755)
 
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1147568777]
-position = Vector2(504, 559)
-texture = ExtResource("2_yb1mt")
+[node name="Sprite2D2" type="Sprite2D" parent="temp" unique_id=1672875278]
+position = Vector2(-82.62108, 8.547058)
+scale = Vector2(2.9558403, 1.0327635)
+texture = ExtResource("2_41gti")
 
-[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=2089041086]
-position = Vector2(672, 559)
-texture = ExtResource("2_yb1mt")
+[node name="Label4" type="Label" parent="temp" unique_id=376673426]
+offset_left = -115.09972
+offset_top = 3.0517578e-05
+offset_right = -51.099716
+offset_bottom = 17.00003
+scale = Vector2(0.975, 0.975)
+theme_override_fonts/font = ExtResource("3_f54a5")
+text = "TEMP"
+
+[node name="air" type="Node2D" parent="." unique_id=889723947]
+position = Vector2(661, 544)
+scale = Vector2(1.755, 1.755)
+
+[node name="Sprite2D2" type="Sprite2D" parent="air" unique_id=1677431349]
+position = Vector2(-82.62108, 8.547058)
+scale = Vector2(2.9558403, 1.0327635)
+texture = ExtResource("2_41gti")
+
+[node name="Label4" type="Label" parent="air" unique_id=264844263]
+offset_left = -108.26211
+offset_right = -44.262108
+offset_bottom = 16.999996
+scale = Vector2(0.975, 0.975)
+theme_override_fonts/font = ExtResource("3_f54a5")
+text = "AIR"
+
+[node name="mag" type="Node2D" parent="." unique_id=1424745823]
+position = Vector2(849, 544)
+scale = Vector2(1.755, 1.755)
+
+[node name="Sprite2D2" type="Sprite2D" parent="mag" unique_id=6022312]
+position = Vector2(-82.62108, 8.547058)
+scale = Vector2(2.9558403, 1.0327635)
+texture = ExtResource("2_41gti")
+
+[node name="Label4" type="Label" parent="mag" unique_id=1523333471]
+offset_left = -110.54131
+offset_right = -46.541313
+offset_bottom = 16.999996
+scale = Vector2(0.975, 0.975)
+theme_override_fonts/font = ExtResource("3_f54a5")
+text = "MAG."
