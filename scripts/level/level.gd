@@ -12,7 +12,10 @@ signal levelOver
 
 func setColonyPreferences(colonyObject):
 	colonyPreferences = colonyObject
-	
+
+
+func addObject(object):
+	$Experiments.add_child(object)
 
 
 func buildLevel(levelObject):
