@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cmso0t026kb2a" path="res://scenes/player/player.tscn" id="2_6t86j"]
 [ext_resource type="PackedScene" uid="uid://fq3wafqtn3dq" path="res://scenes/camera/camera.tscn" id="2_r76ct"]
 [ext_resource type="PackedScene" uid="uid://d1lv7x0c5ogpj" path="res://scenes/level/level.tscn" id="4_3yu1d"]
-[ext_resource type="PackedScene" uid="uid://djp0nv4ddbxsf" path="res://scenes/experiments/thermometer.tscn" id="5_3yu1d"]
 [ext_resource type="PackedScene" uid="uid://cpc1jmd1oxtw1" path="res://scenes/UI/ui.tscn" id="6_c2g8d"]
+[ext_resource type="PackedScene" uid="uid://cb45aiv40rjpf" path="res://alienEntity/hostile_alien.tscn" id="6_fagfu"]
 
 [node name="gameManager" type="Node2D" unique_id=493323348]
 script = ExtResource("1_i04cf")
@@ -22,11 +22,11 @@ zoom = Vector2(0.75, 0.75)
 limit_left = -589
 limit_right = 2410
 
-[node name="Thermometer" parent="." unique_id=1697934362 instance=ExtResource("5_3yu1d")]
-position = Vector2(232, 132)
-
 [node name="UI" parent="." unique_id=222190250 instance=ExtResource("6_c2g8d")]
+
+[node name="baseAlien" parent="." unique_id=1926721184 instance=ExtResource("6_fagfu")]
 
 [connection signal="displayMenu" from="Level" to="." method="_on_level_display_menu"]
 [connection signal="levelOver" from="Level" to="." method="_on_level_level_over"]
+[connection signal="damage" from="Player" to="UI" method="_on_player_damage"]
 [connection signal="placeExperiment" from="Player" to="." method="_on_player_place_experiment"]

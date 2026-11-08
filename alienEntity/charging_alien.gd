@@ -6,7 +6,7 @@ var target : Area2D
 func _on_detector_area_entered(area: Area2D) -> void:
 	target = area
 	currentState = State.MOVING
-	print("DETECTED")
+
 
 func _process(delta: float) -> void:
 	if currentState == State.MOVING:

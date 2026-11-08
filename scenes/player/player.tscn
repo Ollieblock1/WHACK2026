@@ -12,8 +12,12 @@ radius = 396.61063
 [sub_resource type="CircleShape2D" id="CircleShape2D_poog2"]
 radius = 79.83107
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1phas"]
+radius = 54.037025
+
 [node name="Player" type="CharacterBody2D" unique_id=2066525280 groups=["player"]]
 collision_layer = 8
+collision_mask = 16
 script = ExtResource("1_dovo2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1881094132]
@@ -34,7 +38,21 @@ target_position = Vector2(-1, 244)
 
 [node name="experimentDetector" type="Area2D" parent="." unique_id=337041209]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 66
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="experimentDetector" unique_id=587965681]
 shape = SubResource("CircleShape2D_poog2")
+
+[node name="iframes" type="Timer" parent="." unique_id=1351679766]
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1153833758]
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1060976439]
+shape = SubResource("CircleShape2D_1phas")
+debug_color = Color(1, 0, 0, 0.41960785)
+
+[connection signal="timeout" from="iframes" to="." method="_on_iframes_timeout"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_experiment_detector_body_entered"]
+[connection signal="body_exited" from="hitbox" to="." method="_on_experiment_detector_body_exited"]

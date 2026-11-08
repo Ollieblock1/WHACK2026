@@ -71,3 +71,8 @@ func _on_player_show_info() -> void:
 
 func _on_player_hide_info() -> void:
 	$InfoScreen.hide()
+
+
+func _on_player_damage() -> void:
+	print("Damaging")
+	timeCount-=5
