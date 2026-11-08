@@ -21,6 +21,7 @@ point_count = 2
 script = ExtResource("1_i166f")
 
 [node name="floor" type="StaticBody2D" parent="." unique_id=768738622]
+collision_layer = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=1687602233]
 position = Vector2(912, 229)
@@ -53,6 +54,7 @@ position = Vector2(-568, -317)
 position = Vector2(0, 36)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1587103293]
+collision_layer = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=227859744]
 position = Vector2(-583, 136)
