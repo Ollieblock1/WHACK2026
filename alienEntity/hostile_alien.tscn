@@ -3,7 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://ddr6fd7xjl8bb" path="res://alienEntity/chargingAlien.tscn" id="1_hsch1"]
 [ext_resource type="Script" uid="uid://cd68rw70r7bu4" path="res://alienEntity/hostile_alien.gd" id="2_vxn6r"]
 
-[node name="baseAlien" unique_id=1926721184 instance=ExtResource("1_hsch1")]
+[node name="baseAlien" unique_id=1926721184 groups=["evil"] instance=ExtResource("1_hsch1")]
+collision_layer = 192
+collision_mask = 16
 script = ExtResource("2_vxn6r")
 
 [node name="eyebrows" type="Node2D" parent="." index="4" unique_id=1967970796]
