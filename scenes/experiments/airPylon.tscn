@@ -1,9 +1,55 @@
 [gd_scene format=3 uid="uid://cebd01rc0yf0w"]
 
 [ext_resource type="Script" uid="uid://1y5u75awe04w" path="res://scripts/experiments/air_pylon.gd" id="1_xkgi6"]
+[ext_resource type="FontFile" uid="uid://ceiqkej77agtp" path="res://assets/fonts/not-jam-chunky-sans-6-zip/NotJamChunkySans6/Not Jam Chunky Sans 6.ttf" id="2_ixly4"]
+[ext_resource type="Texture2D" uid="uid://c53so5rxb3q8" path="res://assets/experiments/free-drones-pack-pixel-art/1 Drones/1/Idle.png" id="3_23wks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkgi6"]
 size = Vector2(44, 287.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yg7f4"]
+bg_color = Color(0.6, 0.6, 0.6, 0.21176471)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hq1vv"]
+bg_color = Color(0.61960787, 0, 0.039215688, 0.4392157)
+corner_detail = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrx21"]
+atlas = ExtResource("3_23wks")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8jw4"]
+atlas = ExtResource("3_23wks")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mg4w"]
+atlas = ExtResource("3_23wks")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhkfg"]
+atlas = ExtResource("3_23wks")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_poog2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrx21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8jw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mg4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhkfg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="AirPylon" type="Area2D" unique_id=1424453277]
 collision_layer = 10
@@ -20,22 +66,33 @@ one_shot = true
 autostart = true
 
 [node name="Label" type="Label" parent="." unique_id=624829231]
-visible = false
-offset_left = -39.0
-offset_top = -130.0
-offset_right = 39.0
-offset_bottom = -107.0
+offset_left = -169.0
+offset_top = -344.0
+offset_right = -39.0
+offset_bottom = -321.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_ixly4")
 text = "Working..."
 horizontal_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=2130255200]
-offset_left = -22.0
-offset_top = -1.1444092e-05
-offset_right = 29.496643
-offset_bottom = 22.459732
+offset_left = -9.227636
+offset_top = -1.200239e-05
+offset_right = 42.269005
+offset_bottom = 9.556125
 rotation = -1.5707964
 scale = Vector2(5.57859, 1.979658)
+theme_override_styles/background = SubResource("StyleBoxFlat_yg7f4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hq1vv")
 show_percentage = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1332364558]
+position = Vector2(0, -288)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_poog2")
+autoplay = "default"
+frame_progress = 0.25401387
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

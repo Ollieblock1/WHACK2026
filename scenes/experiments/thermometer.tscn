@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://djp0nv4ddbxsf"]
 
 [ext_resource type="Script" uid="uid://6cb0serxqvjf" path="res://scripts/experiments/thermometer.gd" id="1_lbx8j"]
+[ext_resource type="FontFile" uid="uid://ceiqkej77agtp" path="res://assets/fonts/not-jam-chunky-sans-6-zip/NotJamChunkySans6/Not Jam Chunky Sans 6.ttf" id="2_lbx8j"]
+[ext_resource type="Texture2D" uid="uid://chcmp7cjlax0p" path="res://assets/experiments/New_Piskel2.png" id="2_t1rnf"]
+[ext_resource type="Texture2D" uid="uid://ywylw74idxkx" path="res://assets/experiments/New_Piskel2(1).png" id="3_vmyue"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bixf"]
 size = Vector2(38, 78)
@@ -14,20 +17,26 @@ script = ExtResource("1_lbx8j")
 position = Vector2(0, -40)
 shape = SubResource("RectangleShape2D_3bixf")
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1482481297]
-offset_left = -8.0
-offset_top = -3.0
-offset_right = 45.795128
-offset_bottom = 14.669846
-rotation = -1.5707964
+[node name="ProgressBar" type="TextureProgressBar" parent="." unique_id=797931328]
+offset_left = -65.0
+offset_top = -112.0
+offset_right = -1.0
+offset_bottom = -48.0
+scale = Vector2(2, 2)
 min_value = -100.0
-show_percentage = false
+value = 50.0
+fill_mode = 3
+texture_over = ExtResource("2_t1rnf")
+texture_progress = ExtResource("3_vmyue")
 
 [node name="Label" type="Label" parent="." unique_id=1649490068]
-offset_left = -17.0
-offset_top = -79.0
-offset_right = 21.0
-offset_bottom = -56.0
+offset_left = -34.0
+offset_top = -119.0
+offset_right = 26.0
+offset_bottom = -96.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_lbx8j")
 theme_override_font_sizes/font_size = 13
 text = "X00.0"
 

@@ -31,7 +31,11 @@ func _ready() -> void:
 	print(procgenResults)
 	$Level.buildLevel(procgenResults[0])
 	$Level.setColonyPreferences(procgenResults[1])
-	print(procgenResults[0])
+	print("Temperature: " , procgenResults[0].temp)
+	print("air: " , procgenResults[0].air)
+	print("alien: " , procgenResults[0].aliens)
+	
+	
 	
 	
 

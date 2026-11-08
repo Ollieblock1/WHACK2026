@@ -11,9 +11,9 @@ var inventoryUIArray
 func _ready() -> void:
 	timeCount = 60
 	inventoryUIArray = [
-	$Sprite2D,
-	$Sprite2D3,
-	$Sprite2D4
+	$temp,
+	$air,
+	$mag
 	]
 
 

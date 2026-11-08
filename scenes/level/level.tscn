@@ -40,7 +40,7 @@ scale = Vector2(8.5, 8.5)
 texture = ExtResource("3_qkmgm")
 
 [node name="Ship2" parent="." unique_id=1740454847 instance=ExtResource("2_nbgty")]
-position = Vector2(-386, 9)
+position = Vector2(-386, 15)
 
 [node name="Path2D" type="Path2D" parent="." unique_id=122375168]
 position = Vector2(0, 36)
