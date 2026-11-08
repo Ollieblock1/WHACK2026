@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://bck5pcfa82u6e"]
 
 [ext_resource type="Script" uid="uid://wjrlbr5lxxw" path="res://scenes/variable_description.gd" id="1_yvpbp"]
+[ext_resource type="Texture2D" uid="uid://bwg1ybjkukcjq" path="res://assets/UI/neon-ui-kit-lite-r3/x1/panels/panel_medium.png" id="2_l14vk"]
+[ext_resource type="Theme" uid="uid://c4r2fa8viknal" path="res://assets/themes/theme.tres" id="2_ybgpd"]
+[ext_resource type="FontFile" uid="uid://ceiqkej77agtp" path="res://assets/fonts/not-jam-chunky-sans-6-zip/NotJamChunkySans6/Not Jam Chunky Sans 6.ttf" id="4_soa5d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_soa5d"]
+bg_color = Color(0.0627451, 0.101960786, 0.2, 1)
 
 [node name="InfoScreen" type="Control" unique_id=851300588]
+z_index = 10
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,56 +22,63 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yvpbp")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1716858097]
-layout_mode = 0
-offset_right = 284.0
-offset_bottom = 348.0
-color = Color(0.28235295, 0.4862745, 0.5058824, 1)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=134680212]
+position = Vector2(159, 208)
+rotation = 1.5707964
+scale = Vector2(11.250127, 11.176917)
+texture = ExtResource("2_l14vk")
 
 [node name="Title" type="Label" parent="." unique_id=238991167]
 layout_mode = 0
-offset_left = 59.0
+offset_left = 15.0
 offset_top = 23.0
-offset_right = 228.0
+offset_right = 278.0
 offset_bottom = 46.0
+theme = ExtResource("2_ybgpd")
 text = "EMPLOYEE GUIDANCE"
 horizontal_alignment = 1
 
 [node name="Description" type="Label" parent="." unique_id=727036898]
 layout_mode = 0
-offset_left = 27.0
-offset_top = 64.0
-offset_right = 260.0
-offset_bottom = 118.0
+offset_left = -6.0
+offset_top = 54.0
+offset_right = 422.0
+offset_bottom = 108.0
+theme = ExtResource("2_ybgpd")
+theme_override_font_sizes/font_size = 13
 text = "in order to establish a colony,
 this planet must have:"
 
 [node name="List" type="Label" parent="." unique_id=96713529]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 122.0
-offset_right = 259.0
-offset_bottom = 195.0
+offset_left = -25.0
+offset_top = 121.0
+offset_right = 283.0
+offset_bottom = 194.0
+theme = ExtResource("2_ybgpd")
 text = "   - breathable air
    - a magnetic field
    - no hostile species"
 
 [node name="VariableDescription" type="Label" parent="." unique_id=1021151925]
 layout_mode = 0
-offset_left = 29.0
-offset_top = 206.0
-offset_right = 263.0
-offset_bottom = 328.0
+offset_left = 5.0
+offset_top = 215.0
+offset_right = 239.0
+offset_bottom = 337.0
+theme = ExtResource("2_ybgpd")
+theme_override_font_sizes/font_size = 16
 script = ExtResource("1_yvpbp")
 
-[node name="NextPage" type="Button" parent="." unique_id=612923535]
+[node name="NextPage" type="Button" parent="." unique_id=1222122405]
 layout_mode = 0
-offset_left = 94.0
-offset_top = 301.0
-offset_right = 278.0
-offset_bottom = 347.0
-theme_override_font_sizes/font_size = 25
-text = "Leave Planet->"
-flat = true
+offset_left = -23.0
+offset_top = 376.0
+offset_right = 354.0
+offset_bottom = 467.0
+theme_override_fonts/font = ExtResource("4_soa5d")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_soa5d")
+text = "Leave Planet ->"
 
 [connection signal="pressed" from="NextPage" to="." method="_on_next_page_pressed"]

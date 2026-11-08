@@ -10,6 +10,27 @@ var colonyPreferences
 signal levelOver
 
 
+var backgrounds 
+var floors
+
+func _ready() -> void:
+	backgrounds = [
+		preload("res://assets/backgrounds/origbig.png"),
+		preload("res://assets/backgrounds/origbig (2).png"),
+		preload("res://assets/backgrounds/origbig (3).png"),
+		preload("res://assets/backgrounds/origbig (4).png"),
+		preload("res://assets/backgrounds/origbig (5).png"),
+		preload("res://assets/backgrounds/origbig (6).png"),
+		preload("res://assets/backgrounds/origbig (7).png"),
+		preload("res://assets/backgrounds/origbig (8).png"),	
+	]
+	floors = [
+		preload("res://assets/floor/map.png"),
+		preload("res://assets/floor/metal_floor(1).png"),
+		preload("res://assets/floor/metal_floor.png")
+	]
+
+
 func setColonyPreferences(colonyObject):
 	colonyPreferences = colonyObject
 
@@ -34,6 +55,8 @@ func buildLevel(levelObject):
 		$aliens.add_child(instance)
 	
 	print(levelObject.aliens)
+	$Sprite2D.texture = backgrounds[rng.randi_range(0,len(backgrounds)-1)]
+	$floor/Sprite2D.texture = floors[rng.randi_range(0,len(floors)-1)]
 
 
 func endLevel():

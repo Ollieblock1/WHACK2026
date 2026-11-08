@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cgmx7y0ylhhkm"]
 
 [ext_resource type="Script" uid="uid://jy5j6kwyqfuh" path="res://scripts/managers/final_page.gd" id="1_xcl7t"]
+[ext_resource type="Texture2D" uid="uid://bwg1ybjkukcjq" path="res://assets/UI/neon-ui-kit-lite-r3/x1/panels/panel_medium.png" id="2_5ourt"]
+[ext_resource type="Texture2D" uid="uid://dq4nf5ciwnrg4" path="res://assets/themes/pixelart_starfields/pixelart_starfield.png" id="2_gbfp7"]
+[ext_resource type="Theme" uid="uid://c4r2fa8viknal" path="res://assets/themes/theme.tres" id="2_obgd4"]
 
 [node name="finalPage" type="Control" unique_id=584875965]
 layout_mode = 3
@@ -11,21 +14,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xcl7t")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1314815745]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 64.0
-offset_right = 1024.0
-offset_bottom = 568.0
-color = Color(0.28235295, 0.4862745, 0.5058824, 1)
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=378744846]
+position = Vector2(586.32007, 311.15002)
+scale = Vector2(14.024287, 12.882223)
+texture = ExtResource("2_5ourt")
 
 [node name="Label" type="Label" parent="." unique_id=1714428890]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 104.0
-offset_right = 892.0
-offset_bottom = 173.0
-theme_override_font_sizes/font_size = 50
+offset_left = 269.0
+offset_top = 94.0
+offset_right = 1431.0
+offset_bottom = 163.0
+theme = ExtResource("2_obgd4")
+theme_override_font_sizes/font_size = 28
 text = "Is this planet inhabitable?"
 
 [node name="Label2" type="Label" parent="." unique_id=1743971973]
@@ -34,14 +35,22 @@ offset_left = 279.0
 offset_top = 188.0
 offset_right = 319.0
 offset_bottom = 211.0
+theme = ExtResource("2_obgd4")
 
 [node name="Button" type="Button" parent="." unique_id=675738073]
 layout_mode = 0
-offset_left = 430.0
-offset_top = 377.0
-offset_right = 720.0
+offset_left = 314.0
+offset_top = 351.0
+offset_right = 831.0
 offset_bottom = 454.0
-theme_override_font_sizes/font_size = 50
+theme = ExtResource("2_obgd4")
+theme_override_font_sizes/font_size = 40
 text = "Next Planet"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1667815267]
+z_index = -1
+position = Vector2(579.99994, 328.00003)
+scale = Vector2(3.6249998, 2.05)
+texture = ExtResource("2_gbfp7")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -24,7 +24,7 @@ func _on_choice_page_choice_made(val) -> void:
 	if chosenValue == actualValue:
 		instance = win.instantiate()
 		if chosenValue == false: #success!!! you helped people
-			instance.setText("That planet wasn't inhabitable, you saved the colony")
+			instance.setText("That planet wasn't inhabitable,\n you saved the colony")
 		else:
 			instance.setText("You found a new home for the colony")
 			
@@ -33,7 +33,7 @@ func _on_choice_page_choice_made(val) -> void:
 		if chosenValue == false: #success!!! you helped people
 			instance.setText("This could've been the perfect home")
 		else:
-			instance.setText("This planet wasn't inhabitable, you killed everyone")
+			instance.setText("This planet wasn't inhabitable,\n you killed everyone")
 	
 	
 	add_child(instance)
