@@ -7,40 +7,45 @@ signal placeExperiment(object, point)
 var inventory = [1,1,1]
 signal damage
 var enemyIn = false
+var alive = true
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		if $AnimatedSprite2D.animation_finished:
+		if velocity.y>=0 and alive:
 			$AnimatedSprite2D.animation = "fall"
-
+			$AnimatedSprite2D.play()
+	if Input.is_action_pressed("moveLeft") and is_on_floor() and alive:
+		$AnimatedSprite2D.flip_h = true
+		if is_on_floor():
+			$AnimatedSprite2D.animation = "run"
+			$AnimatedSprite2D.play()
+	if Input.is_action_pressed("moveRight") and is_on_floor() and alive:
+		$AnimatedSprite2D.flip_h = false
+		if is_on_floor():
+			$AnimatedSprite2D.animation = "run"
+			$AnimatedSprite2D.play()
 	# Handle jump.
-	if Input.is_action_just_pressed("moveJump") and is_on_floor():
+	if Input.is_action_just_pressed("moveJump") and is_on_floor() and alive:
 		velocity.y = JUMP_VELOCITY
-		$AnimatedSprite2D.animation="jump"
+		$AnimatedSprite2D.animation = "jump"
 		$AnimatedSprite2D.play()
+		
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("moveLeft", "moveRight")
-	if direction:
+	if direction and alive:
 		velocity.x = direction * SPEED
-		if Input.is_action_pressed("moveLeft"):
-			$AnimatedSprite2D.flip_h = true
-		if Input.is_action_pressed("moveRight"):
-			$AnimatedSprite2D.flip_h = false
-		$AnimatedSprite2D.animation = "run"
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	if not (Input.is_anything_pressed() or is_on_floor()):
+	if is_on_floor() and alive and not(Input.is_action_pressed("moveLeft") or Input.is_action_pressed("moveRight") or Input.is_action_pressed("moveJump")):
 		$AnimatedSprite2D.animation = "idle"
-	
-	$AnimatedSprite2D.play()
-
+		$AnimatedSprite2D.play()
+			
 
 	move_and_slide()
-	print(enemyIn)
 
 
 
@@ -96,3 +101,10 @@ func _on_experiment_detector_body_entered(body: Node2D) -> void:
 func _on_experiment_detector_body_exited(body: Node2D) -> void:
 	if "evil" in body.get_groups():
 		enemyIn = false
+
+
+func _on_ui_oxygen_lost() -> void:
+	$AnimatedSprite2D.animation = "death"
+	$AnimatedSprite2D.play()
+	alive = false
+	
