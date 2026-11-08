@@ -5,6 +5,8 @@ const JUMP_VELOCITY = -400.0
 signal placeExperiment(object, point)
 @export var playerHeight = 128
 var inventory = [1,1,1]
+signal damage
+var enemyIn = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -24,10 +26,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 
-	print($experimentDetector.get_overlapping_areas())
-
-
 	move_and_slide()
+	print(enemyIn)
 
 
 
@@ -64,3 +64,22 @@ func _on_show_info_body_exited(body: Node2D) -> void:
 	if body == self:
 		hideInfo.emit()
 '''
+
+
+func _on_iframes_timeout() -> void:
+	if enemyIn:
+		damage.emit()
+		$iframes.start()
+
+
+func _on_experiment_detector_body_entered(body: Node2D) -> void:
+	print(body.get_groups())
+	if "evil" in body.get_groups():
+		enemyIn = true
+		damage.emit()
+		$iframes.start()
+
+
+func _on_experiment_detector_body_exited(body: Node2D) -> void:
+	if "evil" in body.get_groups():
+		enemyIn = false

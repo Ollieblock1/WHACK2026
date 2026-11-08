@@ -35,7 +35,13 @@ target_position = Vector2(-1, 244)
 
 [node name="experimentDetector" type="Area2D" parent="." unique_id=337041209]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 66
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="experimentDetector" unique_id=587965681]
 shape = SubResource("CircleShape2D_poog2")
+
+[node name="iframes" type="Timer" parent="." unique_id=1351679766]
+
+[connection signal="body_entered" from="experimentDetector" to="." method="_on_experiment_detector_body_entered"]
+[connection signal="body_exited" from="experimentDetector" to="." method="_on_experiment_detector_body_exited"]
+[connection signal="timeout" from="iframes" to="." method="_on_iframes_timeout"]
