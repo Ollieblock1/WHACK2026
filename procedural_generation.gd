@@ -1,6 +1,5 @@
 extends Node
 
-
 class generate:
 	var random = RandomNumberGenerator.new()
 	
