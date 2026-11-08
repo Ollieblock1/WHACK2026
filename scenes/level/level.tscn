@@ -45,6 +45,9 @@ position = Vector2(-568, -317)
 
 [node name="aliens" type="Node2D" parent="." unique_id=433730232]
 
+[node name="Experiments" type="Node2D" parent="." unique_id=456956934]
+position = Vector2(0, 36)
+
 [connection signal="body_entered" from="Ship2" to="." method="_on_ship_2_body_entered"]
 [connection signal="body_exited" from="Ship2" to="." method="_on_ship_2_body_exited"]
 [connection signal="levelOver" from="Ship2" to="." method="_on_ship_2_level_over"]

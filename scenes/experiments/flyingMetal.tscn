@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://1k3x53arfo7d"]
 
-[ext_resource type="Script" path="res://scripts/experiments/flying_metal.gd" id="1_ibw3q"]
+[ext_resource type="Script" uid="uid://u465bmx6l5cj" path="res://scripts/experiments/flying_metal.gd" id="1_ibw3q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bixf"]
 size = Vector2(220, 20)
 
 [node name="FlyingMetal" type="CharacterBody2D" unique_id=705397437]
+z_index = 5
 position = Vector2(0, -10)
-collision_layer = 8
+collision_layer = 10
 collision_mask = 8
 script = ExtResource("1_ibw3q")
 
