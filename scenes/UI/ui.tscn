@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cpc1jmd1oxtw1"]
+
+[ext_resource type="Script" uid="uid://cje8srlxoi23w" path="res://scripts/camera/UI.gd" id="1_suays"]
+[ext_resource type="Texture2D" uid="uid://dpunqpfijmmdo" path="res://icon.svg" id="2_yb1mt"]
+
+[node name="UI" type="CanvasLayer" unique_id=222190250]
+script = ExtResource("1_suays")
+
+[node name="Label" type="Label" parent="." unique_id=451133552]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 202.0
+offset_bottom = 156.0
+theme_override_font_sizes/font_size = 50
+text = "0:00
+"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1265559868]
+position = Vector2(327, 559)
+texture = ExtResource("2_yb1mt")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1147568777]
+position = Vector2(504, 559)
+texture = ExtResource("2_yb1mt")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=2089041086]
+position = Vector2(672, 559)
+texture = ExtResource("2_yb1mt")
