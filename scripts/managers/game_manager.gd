@@ -66,3 +66,4 @@ func _on_player_place_experiment(object: Variant, point: Variant) -> void:
 	
 	$Level.addObject(instance)
 	instance.global_position = point
+	$UI.updateInventory(object)

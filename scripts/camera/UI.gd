@@ -1,13 +1,27 @@
-extends Camera2D
+extends CanvasLayer
 
 var timeCount
 signal oxygenLost
 var emitted = false
+var inventory = [1,1,1]
+var inventoryUIArray
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timeCount = 60
+	inventoryUIArray = [
+	$Sprite2D,
+	$Sprite2D3,
+	$Sprite2D4
+	]
 
+
+func updateInventory(index):
+	inventory[index]= 0
+	print(index)
+	print(inventoryUIArray[index])
+	inventoryUIArray[index].visible = false
 
 
 func decreaseTimer(delta):
